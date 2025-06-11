@@ -2,9 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sign Up - CapitalMentorships</title>
+    <meta name="author" content = "Zoeb Izzi">
+    <title> CapitalMentorships</title>
+    <style>
+        .center{text-align:center;}
+        .btn{background-color:pink;border:none;color:white;padding:16px 200px;text-align:center;font-size:22px;margin:20px 200px; transition:0.3s}
+        .btn:hover{background-color:#FF69B4;color:white}
+        .thick-border{border:3px solid green;}
+    </style>
+    <style>
+        body{font-family: "Montserrat"; font-size: 22px;}
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="icon" href="phat.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="main.css" type="text/css">
 </head>
 <body>
-<h1>Coming Soon!</h1>
+<div class="center"><h1>Sign Up</h1><h2>General Info</h2></div>
+
+<p>Enter your team email address: <input placeholder="Email" type="email" id="email" name="email" required="true" style="width: 300px;height:30px;font-family: Monserrat, sans-serif; font-size:16px;">
+<br>
+    <br>Enter your team number: <input type="number" placeholder="Team Number" id="number" required name="number" style="width:300px;height:30px;font-family:Monserrat, sans-serif; font-size:16px;">
+</p>
+<hr class="thick-border">
+<div class="center"><h2>Being A Mentor Info</h2>
+<p>In the following five boxes, please list SPECIFIC things (in order of strength) that your team feels it would be good at helping other teams with.
+Please be as specific as possible - for example, instead of "build", you could say "chassis design" or "3-D printing". The more specific, the more likely
+    it is that you will get matched with a mentee!</p></div>
+<br>
+Enter your strengths here:
+<br>
+<br>
+<ol>
+    <li style="text-indent:30px;"><input type="text" placeholder="Item 1"></li><br>
+    <li style="text-indent:30px;"><input type="text" placeholder="Item 2"></li><br>
+    <li style="text-indent:30px;"><input type="text" placeholder="Item 3"></li><br>
+    <li style="text-indent:30px;"><input type="text" placeholder="Item 4"></li><br>
+<li style="text-indent:30px;"><input type="text" placeholder="Item 5"></li><br>
+</ol>
+What is the maximum number of mentees you wish to be contacted by for any post you make? &emsp;<input type="number">
+<hr class="thick-border">
+<div class="center"><h2>Being A Mentee Info</h2></div>
+What is the maximum number of mentors you wish to be contacted by for any post you make? &emsp;<input type="number">
+<br>
+<br>
+<br>
+<div class="center"><input type="submit"></div>
 </body>
 </html>
