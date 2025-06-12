@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content = "Zoeb Izzi">
+    <meta name="description" content="This is the initial version of the mentorship brokerage program for CapitalBots FTC">
     <title> CapitalMentorships</title>
     <style>
         .center{text-align:center;}
         .btn{background-color:pink;border:none;color:white;padding:16px 200px;text-align:center;font-size:22px;margin:20px 200px; transition:0.3s}
         .btn:hover{background-color:#FF69B4;color:white}
-        .thick-border{border:3px solid green;}
+        .thick-border{border:3px solid blue;}
     </style>
     <style>
         body{font-family: "Montserrat"; font-size: 22px;}
@@ -19,34 +20,53 @@
 </head>
 <body>
 <div class="center"><h1>Sign Up</h1><h2>General Info</h2></div>
-
+<form action="submit.php" method="POST">
 <p>Enter your team email address: <input placeholder="Email" type="email" id="email" name="email" required="true" style="width: 300px;height:30px;font-family: Monserrat, sans-serif; font-size:16px;">
 <br>
     <br>Enter your team number: <input type="number" placeholder="Team Number" id="number" required name="number" style="width:300px;height:30px;font-family:Monserrat, sans-serif; font-size:16px;">
 </p>
+<p>Enter your password: <input type="password" id="password1" name="password1" required style="width: 300px;height:30px;font-family: Monserrat, sans-serif; font-size:16px;">
+    <br>
+<p>Confirm your password: <input type="password" id="password2" name="password2" required style="width: 300px;height:30px;font-family: Monserrat, sans-serif; font-size:16px;">
+    <br>
 <hr class="thick-border">
-<div class="center"><h2>Being A Mentor Info</h2>
+<div class="center"><h2>Mentoring Info</h2>
 <p>In the following five boxes, please list SPECIFIC things (in order of strength) that your team feels it would be good at helping other teams with.
 Please be as specific as possible - for example, instead of "build", you could say "chassis design" or "3-D printing". The more specific, the more likely
-    it is that you will get matched with a mentee!</p></div>
+    it is that you will get matched with a mentee!</p>
+<p>You may say "n/a" if you are unable to fill a strength. If you do not wish to be a mentor and only a mentee, you may enter
+"n/a" in all 5 fields below. You'll be able to change this after your account has been made. </p></div>
 <br>
 Enter your strengths here:
 <br>
 <br>
 <ol>
-    <li style="text-indent:30px;"><input type="text" placeholder="Item 1"></li><br>
-    <li style="text-indent:30px;"><input type="text" placeholder="Item 2"></li><br>
-    <li style="text-indent:30px;"><input type="text" placeholder="Item 3"></li><br>
-    <li style="text-indent:30px;"><input type="text" placeholder="Item 4"></li><br>
-<li style="text-indent:30px;"><input type="text" placeholder="Item 5"></li><br>
+    <li style="text-indent:30px;"><input type="text" id = "item1" required name = "item1" style="width:1000px;height:30px;font-family: Monserrat, sans-serif; font-size:22px;" placeholder="Item 1"></li><br>
+    <li style="text-indent:30px;"><input type="text" id = "item2" required name = "item2" placeholder="Item 2" style="width:1000px;height:30px;font-family:Monserrat,sans-serif;font-size:22px;"></li><br>
+    <li style="text-indent:30px;"><input type="text" id = "item3" required name = "item3" placeholder="Item 3" style="width:1000px;height:30px;font-family:Monserrat,sans-serif;font-size:22px;"></li><br>
+    <li style="text-indent:30px;"><input type="text" id = "item4" required name = "item4" placeholder="Item 4" style="width:1000px;height:30px;font-family:Monserrat,sans-serif;font-size:22px;"></li><br>
+<li style="text-indent:30px;"><input type="text" id = "item5" required name = "item5" placeholder="Item 5" style="width:1000px;height:30px;font-family:Monserrat,sans-serif;font-size:22px;"></li><br>
 </ol>
-What is the maximum number of mentees you wish to be contacted by for any post you make? &emsp;<input type="number">
+What is the maximum number of mentees you wish to be contacted by for any post you make? &emsp;<input type="number" style="width:100px;height:30px;font-family:Monserrat,sans-serif;font-size:22px;">
 <hr class="thick-border">
-<div class="center"><h2>Being A Mentee Info</h2></div>
-What is the maximum number of mentors you wish to be contacted by for any post you make? &emsp;<input type="number">
+<div class="center"><h2>Menteeing Info</h2></div>
+What is the maximum number of mentors you wish to be contacted by for any post you make? &emsp;<input type="number"style="width:100px;height:30px;font-family:Monserrat,sans-serif;font-size:22px;">
 <br>
 <br>
-<br>
-<div class="center"><input type="submit"></div>
+<div class="center"><input type="submit" value="Sign Up" style="width:200;height:30px;font-family:Monserrat,sans-serif;font-size:22px"></div>
+</form>
+<div class="center"> <h2>Thank You!</h2></div>
+
+<script>
+    const form = document.querySelector("form");
+form.addEventListener("submit", (e)=> {
+    e.preventDefault();
+    const fd = new FormData(form);
+    const obj = Object.fromEntries(fd);
+    console.log(obj);
+
+})
+</script>
+
 </body>
 </html>
