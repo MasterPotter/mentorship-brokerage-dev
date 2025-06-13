@@ -20,14 +20,14 @@
 </head>
 <body>
 <div class="center"><h1>Sign Up</h1><h2>General Info</h2></div>
-<form action="submit.php" method="POST">
-<p>Enter your team email address: <input placeholder="Email" type="email" id="email" name="email" required="true" style="width: 300px;height:30px;font-family: Monserrat, sans-serif; font-size:16px;">
+<form action="https://script.google.com/macros/s/AKfycbziLBlXNk7zOgpy8K7HM3Vet3F1zgi3QlAqXetHDY9yQ00N6VeUHeBD7vOibaPYjHJu8w/exec" method="POST" name="sign-up-form">
+<p>Enter your team email address: <input placeholder="Email" type="email" id="email" name="team-email" required="true" style="width: 300px;height:30px;font-family: Monserrat, sans-serif; font-size:16px;">
 <br>
-    <br>Enter your team number: <input type="number" placeholder="Team Number" id="number" required name="number" style="width:300px;height:30px;font-family:Monserrat, sans-serif; font-size:16px;">
+    <br>Enter your team number: <input type="number" placeholder="Team Number" id="number" required name="team-number" style="width:300px;height:30px;font-family:Monserrat, sans-serif; font-size:16px;">
 </p>
-<p>Enter your password: <input type="password" id="password1" name="password1" required style="width: 300px;height:30px;font-family: Monserrat, sans-serif; font-size:16px;">
+<p>Enter your password: <input type="password" id="password1" name="team-password1" required style="width: 300px;height:30px;font-family: Monserrat, sans-serif; font-size:16px;">
     <br>
-<p>Confirm your password: <input type="password" id="password2" name="password2" required style="width: 300px;height:30px;font-family: Monserrat, sans-serif; font-size:16px;">
+<p>Confirm your password: <input type="password" id="password2" name="team-password2" required style="width: 300px;height:30px;font-family: Monserrat, sans-serif; font-size:16px;">
     <br>
 <hr class="thick-border">
 <div class="center"><h2>Mentoring Info</h2>
@@ -47,26 +47,15 @@ Enter your strengths here:
     <li style="text-indent:30px;"><input type="text" id = "item4" required name = "item4" placeholder="Item 4" style="width:1000px;height:30px;font-family:Monserrat,sans-serif;font-size:22px;"></li><br>
 <li style="text-indent:30px;"><input type="text" id = "item5" required name = "item5" placeholder="Item 5" style="width:1000px;height:30px;font-family:Monserrat,sans-serif;font-size:22px;"></li><br>
 </ol>
-What is the maximum number of mentees you wish to be contacted by for any post you make? &emsp;<input type="number" style="width:100px;height:30px;font-family:Monserrat,sans-serif;font-size:22px;">
+What is the maximum number of mentees you wish to be contacted by for any post you make? &emsp;<input type="number" required name="max-mentees" style="width:100px;height:30px;font-family:Monserrat,sans-serif;font-size:22px;">
 <hr class="thick-border">
 <div class="center"><h2>Menteeing Info</h2></div>
-What is the maximum number of mentors you wish to be contacted by for any post you make? &emsp;<input type="number"style="width:100px;height:30px;font-family:Monserrat,sans-serif;font-size:22px;">
+What is the maximum number of mentors you wish to be contacted by for any post you make? &emsp;<input type="number" required name="max-mentors" style="width:100px;height:30px;font-family:Monserrat,sans-serif;font-size:22px;">
 <br>
 <br>
-<div class="center"><input type="submit" value="Sign Up" style="width:200;height:30px;font-family:Monserrat,sans-serif;font-size:22px"></div>
+<div class="center"><input type="submit" value="Sign Up" id="submit" style="width:200;height:30px;font-family:Monserrat,sans-serif;font-size:22px"></div>
 </form>
+
 <div class="center"> <h2>Thank You!</h2></div>
-
-<script>
-    const form = document.querySelector("form");
-form.addEventListener("submit", (e)=> {
-    e.preventDefault();
-    const fd = new FormData(form);
-    const obj = Object.fromEntries(fd);
-    console.log(obj);
-
-})
-</script>
-
 </body>
 </html>
