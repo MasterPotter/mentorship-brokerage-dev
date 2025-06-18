@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content = "Zoeb Izzi">
+    <meta name="author" content="Zoeb Izzi">
     <title> CapitalMentorships</title>
     <style>
         .center{text-align:center;}
@@ -13,17 +13,21 @@
         body{font-family: "Montserrat"; font-size: 22px;}
     </style>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link rel="icon" href="phat.jpg" type="image/x-icon">
+    <link rel="icon" href="logo.png" type="image/x-icon">
     <link rel="stylesheet" href="main.css" type="text/css">
 </head>
 <body>
-<div class="center"><h2>welcome back</h2></div>
+<div class="center"><h2>Welcome Back!</h2></div>
 <div class="center"><h1>Sign In</h1></div>
-<form>
-<p>Enter your team email address: <input placeholder="Email" type="email" id="email" name="email" required style="width: 300px;height:30px;font-family: Monserrat, sans-serif; font-size:16px;">
-    <br>
-<p>Enter your team email address: <input type="password" id="password" name="email" required style="width: 300px;height:30px;font-family: Monserrat, sans-serif; font-size:16px;">
-<div class="center"><input type="submit" value="Sign Up" style="width:200;height:30px;font-family:Monserrat,sans-serif;font-size:22px"></div>
+<form id="login-form">
+    <p>Enter your team email address: <input placeholder="Email" type="email" id="email" name="email" required
+                                             style="width: 300px;height:30px;font-family: Monserrat, sans-serif; font-size:16px;">
+        <br>
+    <p>Enter your team password: <input type="password" id="password" name="password" required
+                                             style="width: 300px;height:30px;font-family: Monserrat, sans-serif; font-size:16px;">
+    <p id="errorMessageSignIn" class="error" style="color:red"></p>
+    <div class="center"><input type="submit" value="Sign In"
+                               style="width:200;height:30px;font-family:Monserrat,sans-serif;font-size:22px"></div>
 </form>
 </body>
 </html>
