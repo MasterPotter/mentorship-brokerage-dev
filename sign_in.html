@@ -29,5 +29,19 @@
     <div class="center"><input type="submit" value="Sign In"
                                style="width:200;height:30px;font-family:Monserrat,sans-serif;font-size:22px"></div>
 </form>
+<script>
+    document.getElementById("login-form").addEventListener("submit", function(e) {
+        e.preventDefault();
+        const email = document.getElementById("email").value;
+        const pw = document.getElementById("password").value;
+        google.script.run.withSuccessHandler(compareResult).checkInput(email);
+        google.script.run.withSuccessHandler(compareResult).checkInput(password);
+    });
+
+    function compareResult(result) {
+        if (result) alert("Inputs matches data in sheet!");
+        else alert("Inputs do not match.");
+    }
+</script>
 </body>
 </html>
